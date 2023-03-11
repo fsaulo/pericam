@@ -41,3 +41,4 @@ build/
 # tag files
 tags
 cscope.out
+dependencies.lock

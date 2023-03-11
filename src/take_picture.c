@@ -101,9 +101,9 @@ static esp_err_t init_camera(uint32_t xclk_freq_hz, pixformat_t pixel_format, fr
 void app_main()
 {
     app_wifi_main();
-    
+
     camera_fb_t *frame;
-    
+
     xQueueIFrame = xQueueCreate(2, sizeof(camera_fb_t *));
 
     /* It is recommended to use a camera sensor with JPEG compression to maximize the speed */
@@ -112,7 +112,7 @@ void app_main()
     TEST_ESP_OK(start_stream_server(xQueueIFrame, true));
 
     ESP_LOGI(TAG, "Begin capture frame");
-    
+
     while (true) {
         frame = esp_camera_fb_get();
         if (frame) {
