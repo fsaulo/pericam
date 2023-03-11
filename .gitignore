@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+# Config files
+*.old
+Session.vim
+
+# Build dir
+build/
+
+# tag files
+tags
+cscope.out
